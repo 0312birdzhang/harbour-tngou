@@ -146,7 +146,7 @@ Page {
                         pageStack.push(Qt.resolvedUrl("../sex/sexlist.qml"));
                         break;
                     default:
-                        pageStack.push(Qt.resolvedUrl(""));
+                        pageStack.push(Qt.resolvedUrl("../"+apid+"/"+apid+"list.qml"));
 
                     }
                 }

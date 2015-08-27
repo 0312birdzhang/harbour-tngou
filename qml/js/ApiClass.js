@@ -1,98 +1,83 @@
 
-
 var dataclass={
-    "yiliaozhongxin": [
+    "medical": [
+        {
+            "name": "药品信息",
+            "apid":"drug"
+        },
         {
             "name": "疾病信息",
-            "id": "jibingxinxi",
             "apid":"disease"
 
         },
         {
-            "name": "病状查找",
-            "id": "jibingchazhao",
-            "apid":"symptom"
+            "name": "手术项目",
+            "apid":"operation"
         },
         {
             "name": "检查项目",
-            "id": "jianchaxiangmu",
             "apid":"check"
         },
         {
-            "name": "手术项目",
-            "id": "shoushuxiangmu",
-            "apid":"surgery"
-        }
-    ],
-    "qiyedaquan": [
+            "name": "病状查找",
+            "apid":"symptom"
+        },
         {
-            "name": "医院大全",
-            "id": "yiyuandaquan",
+            "name":"科室分类",
+            "apid":"department"
+        },
+        {
+            "name":"身体部位",
+            "apid":"place"
+        },
+        {
+            "name": "医院门诊",
             "apid":"hospital"
         },
         {
-            "name": "药店大全",
-            "id": "yaodiandaquan",
+            "name": "药店药房",
             "apid":"store"
         },
         {
-            "name": "药企大全",
-            "id": "yaoqidaquan",
+            "name": "药厂药企",
             "apid":"surgery"
         }
     ],
-
-    "wenhuazhishi": [
+    "health": [
+        {
+            "name": "健康资讯",
+            "apid":"info"
+        },
         {
             "name": "健康知识",
-            "id": "jiankangzhishi",
             "apid":"lore"
         },
         {
             "name": "健康一问",
-            "id": "jiankangyiwen",
             "apid":"ask"
         },
         {
             "name": "健康图书",
-            "id": "jiankangtushu",
             "apid":"book"
         }
     ],
-    "yaopinshipin": [
+    "life": [
+
         {
-            "name": "药品直达",
-            "id": "yaopinzhida",
-            "apid":"drug"
-        },
-        {
-            "name": "食疗大全",
-            "id": "shiliaodaquan",
+            "name": "健康食品",
             "apid":"food"
         },
         {
-            "name": "健康食谱",
-            "id": "jiankangshipu",
+            "name": "健康菜谱",
             "apid":"cook"
-        }
-    ],
-    "xinwenzixun": [
-        {
-            "name": "健康资讯",
-            "id": "jiankangzixun",
-            "apid":"news"
         },
         {
-            "name": "热点热词",
-            "id": "redianreci",
-            "apid":"top"
-        }
-    ],
-    "meinv":[
+            "name": "地域城市",
+            "apid":"area"
+        },
         {
-            "name":"美女图片",
-            "id":"meinv",
-            "apid":"sex"
+            "name": "社会热点",
+            "apid":"top"
         }
     ]
 }

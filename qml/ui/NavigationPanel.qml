@@ -98,13 +98,13 @@ Panel {
                     left: parent.left
                     leftMargin: Theme.paddingLarge
                 }
-                text: qsTr("yiliaozhongxin")
+                text: qsTr("medical")
                 color: Theme.secondaryColor
                 spacing: Theme.paddingMedium
-                icon: "../pics/yiliaozhongxin.png"
+                icon: "../pics/medical.png"
                 iconSize: Theme.itemSizeExtraSmall *2/3
                 onClicked: {
-                    reloadIndex("yiliaozhongxin");
+                    reloadIndex("medical");
                 }
             }
         }
@@ -117,13 +117,13 @@ Panel {
                     left: parent.left
                     leftMargin: Theme.paddingLarge
                 }
-                text: qsTr("qiyedaquan")
+                text: qsTr("health")
                 color: Theme.secondaryColor
                 spacing: Theme.paddingMedium
-                icon: "../pics/qiyedaquan.png"
+                icon: "../pics/health.png"
                 iconSize: Theme.itemSizeExtraSmall *2/3
                 onClicked: {
-                    reloadIndex("qiyedaquan");
+                    reloadIndex("health");
                 }
             }
 
@@ -137,77 +137,38 @@ Panel {
                     left: parent.left
                     leftMargin: Theme.paddingLarge
                 }
-                text: qsTr("wenhuazhishi")
+                text: qsTr("life")
                 color: Theme.secondaryColor
                 spacing: Theme.paddingMedium
-                icon: "../pics/wenhuazhishi.png"
+                icon: "../pics/life.png"
                 iconSize: Theme.itemSizeExtraSmall *2/3
                 onClicked: {
-                    reloadIndex("wenhuazhishi");
+                    reloadIndex("life");
                 }
             }
 
         }
-        Item {
-            width: column.width
-            height: Theme.itemSizeExtraSmall
-            HorizontalIconTextButton {
-                id: comment
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingLarge
-                }
-                text: qsTr("yaopinshipin")
-                color: Theme.secondaryColor
-                spacing: Theme.paddingMedium
-                icon: "../pics/yaopinshipin.png"
-                iconSize: Theme.itemSizeExtraSmall *2/3
-                onClicked: {
-                    reloadIndex("yaopinshipin");
-                }
-            }
 
-        }
-        Item {
-            width: column.width
-            height: Theme.itemSizeExtraSmall
-            HorizontalIconTextButton {
-                id: pm
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingLarge
-                }
-                text: qsTr("xinwenzixun")
-                color: Theme.secondaryColor
-                spacing: Theme.paddingMedium
-                icon: "../pics/xinwenzixun.png"
-                iconSize: Theme.itemSizeExtraSmall *2/3
-                onClicked: {
-                    reloadIndex("xinwenzixun");
-                }
-            }
+//        Item {
+//            width: column.width
+//            height: Theme.itemSizeExtraSmall
+//            HorizontalIconTextButton {
+//                id: sex
+//                anchors {
+//                    left: parent.left
+//                    leftMargin: Theme.paddingLarge
+//                }
+//                text: qsTr("meinv")
+//                color: Theme.secondaryColor
+//                spacing: Theme.paddingMedium
+//                icon: "../pics/sex.png"
+//                iconSize: Theme.itemSizeExtraSmall *2/3
+//                onClicked: {
+//                    reloadIndex("meinv");
+//                }
+//            }
 
-        }
-        Item {
-            width: column.width
-            height: Theme.itemSizeExtraSmall
-            HorizontalIconTextButton {
-                id: sex
-                anchors {
-                    left: parent.left
-                    leftMargin: Theme.paddingLarge
-                }
-                text: qsTr("meinv")
-                color: Theme.secondaryColor
-                spacing: Theme.paddingMedium
-                icon: "../pics/sex.png"
-                iconSize: Theme.itemSizeExtraSmall *2/3
-                onClicked: {
-                    reloadIndex("meinv");
-                }
-            }
-
-        }
+//        }
         Item {
             width: column.width
             height: Theme.itemSizeExtraSmall
@@ -219,7 +180,7 @@ Panel {
                 text: qsTr("Settings")
                 color: Theme.secondaryColor
                 spacing: Theme.paddingMedium
-                icon: "../pics/shezhi.png"
+                icon: "../pics/seeting.png"
                 iconSize: Theme.itemSizeExtraSmall *2/3
                 onClicked: {
                    pageStack.push(Qt.resolvedUrl("../pages/SettingPage.qml"));

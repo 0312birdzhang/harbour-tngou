@@ -43,7 +43,7 @@ ApplicationWindow
     property var notification;
     property int openimg:-1
     property Page currentPage: pageStack.currentPage
-    property string currentclass: "yiliaozhongxin"
+    property string currentclass: "medical"
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 
     SignalCenter{
@@ -62,7 +62,7 @@ ApplicationWindow
     }
 
     function showMsg(message) {
-        notification.previewBody = "医药吧";
+        notification.previewBody = "监控百科";
         notification.previewSummary = message;
         notification.publish();
     }
@@ -211,7 +211,6 @@ Python{
 
         //注册保存方法
         function saveImg(basename,volname){
-            console.log("img:"+volname+",basename:"+basename);
             call('main.saveImg',[basename,volname],function(result){
                 return result
             })
