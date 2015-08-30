@@ -76,8 +76,8 @@ Page {
                 height:childrenRect.height + Theme.paddingMedium *4
                 width:parent.width
                 Label{
-                    id:infoID
-                    text:"["+ANumber+"] "+PType
+                    id:descID
+                    text:description
                     wrapMode: Text.WordWrap
                     width: parent.width
                     font.pixelSize:Theme.fontSizeSmall
@@ -90,25 +90,13 @@ Page {
                     }
                 }
                 Label{
-                    id:pri
-                    text:factory/*+ "<br/> 售价 :"+price*/
-                    font.pixelSize:Theme.fontSizeExtraSmall
-                    anchors{
-                        top:infoID.bottom
-                        left:parent.left
-                        right:parent.right
-                        margins: Theme.paddingMedium
-                    }
-
-                }
-                Label{
                     id:tagID
                     text:"作用: "+tag
                     width: parent.width
                     font.pixelSize:Theme.fontSizeSmall
                     wrapMode: Text.WordWrap
                     anchors{
-                        top:pri.bottom
+                        top:descID.bottom
                         left:parent.left
                         right:parent.right
                         margins: Theme.paddingMedium

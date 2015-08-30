@@ -36,6 +36,7 @@ import "components"
 import "cook"
 import "ui"
 import "js/ApiMain.js" as Main
+import "js/Storge.js" as Settings
 ApplicationWindow
 {
 
@@ -59,10 +60,17 @@ ApplicationWindow
     Component.onCompleted: {
         notification = Qt.createQmlObject("import org.nemomobile.notifications 1.0; Notification{}", applicationWindow)
         Main.setsignalcenter(signalCenter);
+        Settings.initialize();
+        openimg=Settings.getSetting();
+    }
+
+    function updateSetting(){
+        openimg=-1*openimg;
+        Settings.setPic(openimg);
     }
 
     function showMsg(message) {
-        notification.previewBody = "监控百科";
+        notification.previewBody = "健康百科";
         notification.previewSummary = message;
         notification.publish();
     }

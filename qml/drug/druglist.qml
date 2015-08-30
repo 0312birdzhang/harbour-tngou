@@ -153,7 +153,7 @@ Page {
                         wrapMode: Text.WordWrap
                         font.pixelSize:Theme.fontSizeSmall
                         opacity:0.8
-                        text:factory?factory:""
+                        text:description?description:""
                         anchors{
                             top:drugtit.bottom
                             right:imgID.left
@@ -167,8 +167,7 @@ Page {
                         fillMode: Image.Stretch;
                         width:  Screen.width/3
                         height: Screen.width/3
-                        opencache: image?true:(img?true:false)
-                        cacheurl:image?"http://tnfs.tngou.net/image/"+image:(img?"http://tnfs.tngou.net/image/"+img:"image://theme/icon-m-refresh")
+                        cacheurl:"http://tnfs.tngou.net/image/"+img
                         anchors {
                             top:parent.top
                             right: parent.right
@@ -181,7 +180,7 @@ Page {
                     pageStack.push(Qt.resolvedUrl("drugdetail.qml"),
                                    {
                                        "drugid":id,
-                                       "drugtitle":name?name:title
+                                       "drugtitle":name
                                    })
                 }
             }

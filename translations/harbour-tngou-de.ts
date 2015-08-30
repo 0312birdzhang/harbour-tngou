@@ -56,31 +56,19 @@
 <context>
     <name>NavigationPanel</name>
     <message>
-        <source>yiliaozhongxin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>qiyedaquan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>wenhuazhishi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>yaopinshipin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>xinwenzixun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>meinv</source>
+        <source>medical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>health</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>life</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

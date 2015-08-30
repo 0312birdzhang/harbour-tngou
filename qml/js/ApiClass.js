@@ -78,7 +78,12 @@ var dataclass={
         {
             "name": "社会热点",
             "apid":"top"
+        },
+        {
+            "name": "新闻资讯",
+            "apid": "news"
         }
+
     ]
 }
 

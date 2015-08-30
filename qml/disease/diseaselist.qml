@@ -157,7 +157,7 @@ Page {
                     wrapMode: Text.WordWrap
                     width: parent.width-dispic.width
                     font.bold:true;
-                    text:name?name:title
+                    text:name
                     color:Theme.highlightColor
                     anchors{
                         top:parent.top
@@ -172,7 +172,7 @@ Page {
                     width: parent.width - dispic.width
                     visible: department?true:false
                     wrapMode: Text.WordWrap
-                    text:department?"<br/>科室:<br/>"+department:""
+                    text:"<br/>科室:<br/>"+department
                     color: diseasepage.highlighted ? Theme.highlightColor : Theme.primaryColor
                     font {
                         pixelSize: Theme.fontSizeSmall

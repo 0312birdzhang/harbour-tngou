@@ -10,7 +10,7 @@ import "../js/md5.js" as MD5
     Image {
         id: root
         property string cacheurl: ""
-        property bool opencache: true
+        property bool opencache: openimg == 1
         asynchronous: true
         Python{
             id:imgpy

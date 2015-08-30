@@ -112,7 +112,7 @@ Page {
                     width: parent.width - Theme.paddingLarge * 4
                     height: parent.height - Theme.paddingLarge * 4
                     smooth: true
-                    source:"../pics/"+id+".png"
+                    source:"../pics/"+apid+".png"
                     fillMode: Image.PreserveAspectFit
                     anchors{
                         top:secdclassname.bottom

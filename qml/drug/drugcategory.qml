@@ -36,7 +36,7 @@ Page{
 
     Component.onCompleted: {
         Main.catemodel = drugcategoryModel;
-        Main.getcate("drug/drugclass")
+        Main.getcate("drug/classify")
     }
     ListModel {
         id:drugcategoryModel
@@ -70,7 +70,7 @@ Page{
                 wrapMode: Text.WordWrap
                 textFormat: Text.StyledText
                 color: gridView.highlighted ? Theme.highlightColor : Theme.primaryColor
-                text: "<br/>"+title
+                text: "<br/>"+name
                 font {
                     pixelSize: Theme.fontSizeSmall
                     family: Theme.fontFamilyHeading

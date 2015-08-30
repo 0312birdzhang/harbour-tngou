@@ -27,103 +27,134 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../components"
 import "../js/ApiMain.js" as Main
-Page{
-    id:cookdetail
-    property var cookmessage:""
-    property var cooktag:""
-    property var cookid
-    property var cookimg
-    property var remoteurl
-    property var cookname
-    Component.onCompleted:{
-        Main.getcookdetail(cookid);
-    }
-    Connections{
-        target: signalCenter;
-        onLoadFinished:{
-            cooktag=Main.cooktag;
-            cookmessage = Main.cookmessage;
-        }
-    }
-    BusyIndicator {
-        id: busyIndicator
-        anchors.centerIn: parent
-        running: !PageStatus.Active
-        size: BusyIndicatorSize.Large
+
+Page {
+    property var diseaseid
+    property string diseaseimg
+    property string remoteurl
+    property string diseasename
+
+    id: detailpage
+    Component.onCompleted: {
+        Main.detailmodel = diseasemodel;
+        Main.getdetail("disease/show?id="+diseaseid);
+
     }
 
-    SilicaFlickable{
-        id:fickable
-        anchors.fill: parent
-        PageHeader{
-            id:header
-            title:cookname
-            _titleItem.font.pixelSize: Theme.fontSizeSmall
-        }
-        contentHeight: tagname.height + detail.height +cookpic.height + Theme.paddingLarge * 10
-        Label{
-            id:tagname
-            text:qsTr("tags :")+cooktag
-            wrapMode: Text.WordWrap
-            width:parent.width
-            font.pixelSize: Theme.fontSizeTiny
-            color: Theme.secondaryColor
-            anchors{
-                top:header.bottom
-                left:parent.left
-                right:parent.right
-                margins: Theme.paddingLarge
+    ListModel{id:diseasemodel}
+
+
+//    Label{
+//        id:classtag
+//        //width: parent.width
+//        font.pixelSize:Theme.fontSizeExtraSmall
+//        wrapMode: Text.WordWrap
+//        text:"tag: "+classname
+//        anchors{
+//            top:header.bottom
+//            right:parent.right
+//            margins: Theme.paddingMedium
+//        }
+//    }
+
+
+    SilicaListView {
+            id:view
+            anchors.fill: parent
+            header: PageHeader {
+                id:header
+                title:diseasename
+                _titleItem.font.pixelSize: Theme.fontSizeSmall
             }
-        }
+            currentIndex: -1
+            model : diseasemodel
+            clip: true
+            delegate:Item{
+                height:childrenRect.height + Theme.paddingMedium *4
+                width:parent.width
+                Label{
+                    id:careID
+                    text:"预防: "+caretext
+                    wrapMode: Text.WordWrap
+                    width: parent.width
+                    textFormat: Text.RichText
+                    font.pixelSize:Theme.fontSizeSmall
+                    opacity: 0.9
+                    anchors{
+                        top:parent.top
+                        left:parent.left
+                        right:parent.right
+                        margins: Theme.paddingMedium
+                    }
+                }
+                Label{
+                    id:tagID
+                    text:"检查描述: "+checktext
+                    width: parent.width
+                    font.pixelSize:Theme.fontSizeSmall
+                    wrapMode: Text.WordWrap
+                    textFormat: Text.RichText
+                    opacity: 0.9
+                    anchors{
+                        top:careID.bottom
+                        left:parent.left
+                        right:parent.right
+                        margins: Theme.paddingMedium
+                    }
+                }
 
-       Label{
-           id:detail
-           width: parent.width
-           wrapMode: Text.WordWrap
-           textFormat: Text.RichText
-           font.pixelSize:Theme.fontSizeSmall
-           font.letterSpacing: Theme.paddingSmall
-           anchors{
-               top:tagname.bottom
-               left:parent.left
-               right:parent.right
-               margins: Theme.paddingLarge
-           }
-           text:cookmessage
-           color: fickable.highlighted ? Theme.highlightColor : Theme.primaryColor
+                Label {
+                    id:descID
+                    wrapMode: Text.WordWrap
+                    width: parent.width
+                    textFormat: Text.RichText
+                    text: "疾病描述: "+message
+                    font.pixelSize:Theme.fontSizeSmall
+                    font.letterSpacing: Theme.paddingSmall
+                    color: view.highlighted ? Theme.highlightColor : Theme.primaryColor
+                    anchors {
+                        top:tagID.bottom
+                        left: parent.left
+                        right:parent.right
+                        margins: Theme.paddingMedium
 
-       }
+                    }
+                }
+                Label{
+                    id:drugID
+                    text:"相关药品: "+drug
+                    width: parent.width
+                    font.pixelSize:Theme.fontSizeSmall
+                    wrapMode: Text.WordWrap
+                    textFormat: Text.RichText
+                    opacity: 0.9
+                    anchors{
+                        top:descID.bottom
+                        left:parent.left
+                        right:parent.right
+                        margins: Theme.paddingMedium
+                    }
+                }
+            }
 
-       Image{
-           id:cookpic
-           fillMode: Image.Stretch;
-           width:  parent.width
-           height: parent.width
-           source: cookimg
-           anchors{
-               top:detail.bottom
-               left:parent.left
-               right:parent.right
-               margins: Theme.paddingLarge
-           }
-//           MouseArea{
-//               anchors.fill: parent
-//               onClicked:{
-//                   pageStack.push(Qt.resolvedUrl("../components/ImagePage.qml"),{"localUrl":cookimg,"imgname":cookname});
-//               }
-//           }
-       }
 
-       Item{
-           anchors.top: cookpic.bottom
-           width:1;
-           height: Theme.paddingLarge*3
-       }
+            VerticalScrollDecorator {}
+
+
     }
-
+    BusyIndicator{
+        running: !PageStatus.Active
+        size:BusyIndicatorSize.Large
+        anchors.fill: parent
+    }
 
 }
+
+
+
+

@@ -32,7 +32,7 @@ Page {
             Image{
                 id:logo
                 fillMode: Image.Stretch;
-                source:"../pics/harbour-yiyaoba.png"
+                source:"../pics/harbour-tngou.png"
                 anchors.horizontalCenter: parent.horizontalCenter;
             }
 
@@ -52,15 +52,15 @@ Page {
             Item{width:1;height:1}
             LabelText {
                 label: qsTr("Author")
-                text: "本软件是医药吧旗鱼客户端版本,作者:0312birdzhang,感谢狗哥对医疗、开源的无私奉献！(软件暂未全部编写完成，只完成了不到一半)"
+                text: "本软件是天狗云开放平台旗鱼客户端版本,感谢狗哥对医疗、开源的无私奉献！"
 
             }
             Item{width:1;height:1}
             LabelText {
                 label: qsTr("Donation")
-                text:"如果你觉得此软件你有所益处，你可以选择捐赠本人或者医药吧。当然，本软件是完全"
+                text:"如果你觉得此软件你有所益处，你可以选择捐赠本人或者狗哥。当然，本软件是完全"
                     +"免费的，你可以尽情使用。<br/>"+
-                     "  我的支付宝账号:18520399451 <br/> Donations are welcome :)"
+                     "  我的支付宝账号:18520399451 <br/> 狗哥的支付宝账号tngou@tngou.net<br/> Donations are welcome :)"
 
             }
             Item{width:1;height:1}
@@ -74,7 +74,7 @@ Page {
                 TextSwitch {
                     id: imgswitch
                     checked: openimg == 1
-                    //onClicked: updateSetting()
+                    onClicked: updateSetting()
                     text: "显示图片"
                 }
 

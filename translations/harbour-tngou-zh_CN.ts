@@ -15,12 +15,8 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>Yiyao</source>
-        <translation type="vanished">健康百科</translation>
-    </message>
-    <message>
         <source>Tngou</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -45,23 +41,23 @@
     <name>NavigationPanel</name>
     <message>
         <source>yiliaozhongxin</source>
-        <translation>医疗中心</translation>
+        <translation type="vanished">医疗中心</translation>
     </message>
     <message>
         <source>qiyedaquan</source>
-        <translation>企业大全</translation>
+        <translation type="vanished">企业大全</translation>
     </message>
     <message>
         <source>wenhuazhishi</source>
-        <translation>文化知识</translation>
+        <translation type="vanished">文化知识</translation>
     </message>
     <message>
         <source>yaopinshipin</source>
-        <translation>药品食品</translation>
+        <translation type="vanished">药品食品</translation>
     </message>
     <message>
         <source>xinwenzixun</source>
-        <translation>新闻资讯</translation>
+        <translation type="vanished">新闻资讯</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -69,7 +65,19 @@
     </message>
     <message>
         <source>meinv</source>
-        <translation>美女图片</translation>
+        <translation type="vanished">美女图片</translation>
+    </message>
+    <message>
+        <source>medical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>health</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>life</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -167,18 +175,18 @@
     <name>diseasedetail</name>
     <message>
         <source>tags :</source>
-        <translation type="unfinished">标签:</translation>
+        <translation>标签:</translation>
     </message>
 </context>
 <context>
     <name>diseaselist</name>
     <message>
         <source>Hide Search</source>
-        <translation type="unfinished">隐藏搜索框</translation>
+        <translation>隐藏搜索框</translation>
     </message>
     <message>
         <source>Show Search</source>
-        <translation type="unfinished">显示搜索框</translation>
+        <translation>显示搜索框</translation>
     </message>
 </context>
 <context>
@@ -200,38 +208,19 @@
     <name>harbour-tngou</name>
     <message>
         <source>Successed saved to ~/Pictures/save/Yiyao/</source>
-        <translation type="unfinished">成功保存到 ~/Pictures/save/Yiyao/</translation>
+        <translation>成功保存到 ~/Pictures/save/Yiyao/</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">错误</translation>
+        <translation>错误</translation>
     </message>
     <message>
         <source>Cleared</source>
-        <translation type="unfinished">已清除缓存</translation>
+        <translation>已清除缓存</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished">未知问题</translation>
-    </message>
-</context>
-<context>
-    <name>harbour-yiyaoba</name>
-    <message>
-        <source>Successed saved to ~/Pictures/save/Yiyao/</source>
-        <translation type="vanished">成功保存到 ~/Pictures/save/Yiyao/</translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation type="vanished">错误</translation>
-    </message>
-    <message>
-        <source>Cleared</source>
-        <translation type="vanished">已清除缓存</translation>
-    </message>
-    <message>
-        <source>Unknown</source>
-        <translation type="vanished">未知问题</translation>
+        <translation>未知问题</translation>
     </message>
 </context>
 <context>
